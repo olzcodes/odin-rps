@@ -53,7 +53,7 @@ const game = function () {
     console.log(`------------------------------------`);
   }
 
-  // Check if there was a winner
+  // Check if there was a final winner
   if (score["player"] > score["computer"]) {
     console.log(`PLAYER wins the game!`);
   } else if (score["player"] < score["computer"]) {
