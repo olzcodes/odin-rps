@@ -34,7 +34,7 @@ const playRound = function (playerSelection, computerSelection) {
 };
 
 const game = function () {
-  let score = { player: 0, computer: 0, tie: 0 };
+  let score = { player: 0, tie: 0, computer: 0 };
 
   for (i = 0; i < 5; i++) {
     // Get player and computer selections
