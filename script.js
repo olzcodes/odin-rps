@@ -11,13 +11,10 @@ const getComputerChoice = function () {
   return weapons[number];
 };
 
-const displayChoices = function (playerSelection, computerSelection) {
+const playRound = function (playerSelection, computerSelection) {
+  // Display choices
   console.log(`player:   ${playerSelection}`);
   console.log(`computer: ${computerSelection}`);
-};
-
-const playRound = function (playerSelection, computerSelection) {
-  displayChoices(playerSelection, computerSelection);
 
   // Check for tie
   if (playerSelection === computerSelection) {
@@ -49,12 +46,14 @@ const game = function () {
     // Display round number
     console.log(`Round ${i + 1}`);
 
+    // Play one round and update score
     const roundWinner = playRound(playerSelection, computerSelection);
     score[roundWinner]++;
     console.log(score);
     console.log(`------------------------------------`);
   }
 
+  // Check if there was a winner
   if (score["player"] > score["computer"]) {
     console.log(`PLAYER wins the game!`);
   } else if (score["player"] < score["computer"]) {
