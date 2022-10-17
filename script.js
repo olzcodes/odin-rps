@@ -58,11 +58,11 @@ const game = function (rounds) {
 
   // Check if there was a final winner
   if (score["player"] > score["computer"]) {
-    console.log(`PLAYER wins the game!`);
+    console.log(`<<<<< PLAYER wins the game! >>>>>`);
   } else if (score["player"] < score["computer"]) {
-    console.log(`COMPUTER wins the game!`);
+    console.log(`<<<<< COMPUTER wins the game! >>>>>`);
   } else {
-    console.log(`TIE`);
+    console.log(`<<<<< TIE >>>>>`);
   }
 };
 
