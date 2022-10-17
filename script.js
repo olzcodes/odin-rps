@@ -40,7 +40,10 @@ const game = function (rounds) {
     // Get player and computer selections
     const playerSelection = prompt(
       `choose your weapon [ rock , paper , scissors ]`
-    ).toLowerCase();
+    )?.toLowerCase();
+
+    if (playerSelection == null || playerSelection == "") return;
+
     const computerSelection = getComputerChoice();
 
     // Display round number
