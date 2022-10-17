@@ -1,0 +1,61 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  text-align: center;
+}
+
+* {
+  border: 1px solid red;
+  margin: 10px;
+}
+
+table,
+tr,
+th,
+td {
+  border: 1px solid coral;
+}
+
+.round {
+  display: flex;
+  justify-content: space-around;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+}
+
+.score-row {
+  background-color: aqua;
+}
+
+.score-header {
+  width: 200px;
+}
+
+.score-data {
+  width: 200px;
+}
+
+.computer,
+.player {
+  display: flex;
+  justify-content: center;
+}
+
+.computer-buttons,
+.player-buttons {
+  /* display: flex; */
+}
+
+.computer-buttons button,
+.player-buttons button {
+  width: 8rem;
+  height: 3rem;
+}
