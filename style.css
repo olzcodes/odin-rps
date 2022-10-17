@@ -10,7 +10,7 @@ html {
 }
 
 * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 10px;
 }
 
@@ -32,15 +32,16 @@ td {
 }
 
 .score-row {
-  background-color: aqua;
+  background-color: lightgray;
 }
 
 .score-header {
-  width: 200px;
+  width: 10em;
 }
 
 .score-data {
-  width: 200px;
+  background-color: aquamarine;
+  width: 10em;
 }
 
 .computer,
@@ -49,13 +50,22 @@ td {
   justify-content: center;
 }
 
+.computer {
+  background-color: lightgray;
+}
+
+.player {
+  background-color: lightcoral;
+}
+
 .computer-buttons,
 .player-buttons {
-  /* display: flex; */
+  display: flex;
+  flex: 1;
 }
 
 .computer-buttons button,
 .player-buttons button {
-  width: 8rem;
-  height: 3rem;
+  flex: 1;
+  height: 5em;
 }
