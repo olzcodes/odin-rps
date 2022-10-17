@@ -5,28 +5,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
   <title>Odin Rock Paper Scissors</title>
 </head>
 
 <body>
-  <div class="round">Round 2</div>
-
-  <div class="computer">
-    <div class="text">computer</div>
-    <div class="score">1</div>
-    <button class="rock">rock</button>
-    <button class="paper">paper</button>
-    <button class="scissors">scissors</button>
+  <div class="round"></div>
+  <table class="score">
+    <tr class="score-row">
+      <th class="score-header">computer</th>
+      <th class="score-header">tie</th>
+      <th class="score-header">player</th>
+    </tr>
+    <tr class="score-row">
+      <td class="score-data" id="score-computer"></td>
+      <td class="score-data" id="score-tie"></td>
+      <td class="score-data" id="score-player"></td>
+    </tr>
+  </table>
   </div>
 
-  <div class="score">0</div>
+  <div class="computer">
+    <div class="computer-buttons">
+      <button class="rock">rock</button>
+      <button class="paper">paper</button>
+      <button class="scissors">scissors</button>
+    </div>
+  </div>
+
+  <div class="result"></div>
 
   <div class="player">
-    <button class="rock">rock</button>
-    <button class="paper">paper</button>
-    <button class="scissors">scissors</button>
-    <div class="score">1</div>
-    <div class="text">player</div>
+    <div class="player-buttons">
+      <button class="rock">rock</button>
+      <button class="paper">paper</button>
+      <button class="scissors">scissors</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
