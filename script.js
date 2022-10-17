@@ -42,7 +42,7 @@ const game = function (rounds) {
       `choose your weapon [ rock , paper , scissors ]`
     )?.toLowerCase();
 
-    if (playerSelection == null || playerSelection == "") return;
+    if (playerSelection == null) return;
 
     const computerSelection = getComputerChoice();
 
