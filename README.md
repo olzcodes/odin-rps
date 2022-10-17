@@ -13,3 +13,10 @@ The aim of part 2 is to add a GUI (graphical user interface).
 #### Version 1 - Browser Console after 5 rounds played
 
 ![screenshot after 5 rounds played](./screenshot-1.png)
+
+## To-Do
+
+- create basic graphical user interface
+- refine layout and graphics
+- add animations ?
+- add sounds ?
