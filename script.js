@@ -33,10 +33,10 @@ const playRound = function (playerSelection, computerSelection) {
   }
 };
 
-const game = function () {
+const game = function (rounds) {
   let score = { player: 0, tie: 0, computer: 0 };
 
-  for (i = 0; i < 5; i++) {
+  for (i = 0; i < rounds; i++) {
     // Get player and computer selections
     const playerSelection = prompt(
       `choose your weapon [ rock , paper , scissors ]`
@@ -63,4 +63,4 @@ const game = function () {
   }
 };
 
-game();
+game(5);
