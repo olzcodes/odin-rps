@@ -1,4 +1,3 @@
-const messageTop = document.querySelector(".message-top");
 const computerScore = document.querySelector("#score-computer");
 const tieScore = document.querySelector("#score-tie");
 const playerScore = document.querySelector("#score-player");
@@ -57,7 +56,7 @@ playerButtons.forEach((button) =>
     // Round counter
     round += 1;
     console.log(`Round ${round}`);
-    messageTop.textContent = `round ${round}`;
+    messageMiddle.textContent = `round ${round}`;
 
     // Play one round and update score
     showComputerSelection(computerSelection);
@@ -135,10 +134,9 @@ const resetGame = function () {
   playerSelection = "";
   computerSelection = "";
   score = { computer: 0, tie: 0, player: 0 };
-  messageTop.textContent = "start";
   computerScore.textContent = 0;
   tieScore.textContent = 0;
   playerScore.textContent = 0;
-  messageMiddle.textContent = "start";
+  messageMiddle.textContent = "...";
   gameActive = true;
 };
