@@ -22,18 +22,18 @@ const getComputerSelection = function () {
 const showComputerSelection = function (selection) {
   computerButtons.forEach((button) => {
     if (button.classList.value.split(" ")[1] === selection) {
-      button.style.background = "plum";
+      button.style.boxShadow = "0px 0px 40px 20px #0ff";
     }
     setTimeout(() => {
-      button.style.background = "";
+      button.style.boxShadow = "";
     }, 2000);
   });
 };
 
 const showPlayerSelection = function (button) {
-  button.style.background = "plum";
+  button.style.boxShadow = "0px 0px 40px 20px #ffd7ff";
   setTimeout(() => {
-    button.style.background = "";
+    button.style.boxShadow = "";
   }, 2000);
 };
 
