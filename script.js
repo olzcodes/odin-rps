@@ -111,8 +111,8 @@ const checkWinner = function () {
     console.log(`< < < COMPUTER wins the game! > > >`);
     messageMiddle.textContent = `< < < COMPUTER wins the game! > > >`;
   } else {
-    console.log(`< < < TIE > > >`);
-    messageMiddle.textContent = `< < < TIE > > >`;
+    console.log(`< < < NO WINNER > > >`);
+    messageMiddle.textContent = `< < < NO WINNER > > >`;
   }
 
   setTimeout(afterGame, 1000);
@@ -124,7 +124,7 @@ const afterGame = function () {
     resetGame();
   } else {
     gameActive = false;
-    console.log(`Thank you for playing!`);
+    console.log(`Thank you for playing :)`);
     messageMiddle.textContent = `thank you for playing :)`;
   }
 };
