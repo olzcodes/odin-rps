@@ -83,7 +83,9 @@ table {
   height: 5em;
 }
 
-.message {
+.message-top,
+.message-middle,
+.message-bottom {
   border: 1px solid turquoise;
   padding: 20px;
 }
