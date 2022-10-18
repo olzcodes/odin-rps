@@ -1,5 +1,11 @@
 html {
   box-sizing: border-box;
+  background-color: mediumslateblue;
+  color: white;
+  /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1em;
 }
 
 *,
@@ -12,13 +18,18 @@ html {
 * {
   /* border: 1px solid red; */
   margin: 10px;
+  border-radius: 5em;
+}
+
+button {
+  border: none;
 }
 
 table,
 tr,
 th,
 td {
-  border: 1px solid coral;
+  border: 1px solid turquoise;
 }
 
 .round {
@@ -32,7 +43,8 @@ td {
 }
 
 .score-row {
-  background-color: lightgray;
+  background-color: gray;
+  height: 2em;
 }
 
 .score-header {
@@ -40,8 +52,10 @@ td {
 }
 
 .score-data {
-  background-color: aquamarine;
-  width: 10em;
+  background-color: silver;
+  width: 5em;
+  height: 5em;
+  font-size: 2em;
 }
 
 .computer,
@@ -51,11 +65,11 @@ td {
 }
 
 .computer {
-  background-color: lightgray;
+  background-color: turquoise;
 }
 
 .player {
-  background-color: lightcoral;
+  background-color: violet;
 }
 
 .computer-buttons,
@@ -68,4 +82,9 @@ td {
 .player-buttons button {
   flex: 1;
   height: 5em;
+}
+
+.message {
+  border: 1px solid turquoise;
+  padding: 20px;
 }
