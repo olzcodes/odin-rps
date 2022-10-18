@@ -1,3 +1,5 @@
+const html = document.querySelector("html");
+const scoreTable = document.querySelector(".score");
 const computerScore = document.querySelector("#score-computer");
 const tieScore = document.querySelector("#score-tie");
 const playerScore = document.querySelector("#score-player");
@@ -152,3 +154,15 @@ const resetGame = function () {
 };
 
 letsPlay();
+
+let colorNumber = 0;
+
+const toggleBGColor = function () {
+  const colorArray = ["slateblue", "darkslateblue", "gray", "mediumslateblue"];
+  html.style.backgroundColor = colorArray[colorNumber];
+  if (colorNumber < colorArray.length - 1) {
+    colorNumber++;
+  } else colorNumber = 0;
+};
+
+scoreTable.addEventListener("click", toggleBGColor);
