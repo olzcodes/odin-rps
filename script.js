@@ -1,10 +1,11 @@
+const messageTop = document.querySelector(".message-top");
 const computerScore = document.querySelector("#score-computer");
 const tieScore = document.querySelector("#score-tie");
 const playerScore = document.querySelector("#score-player");
-const messageTop = document.querySelector(".message-top");
 const computerButtons = document.querySelectorAll(".computer-btn");
 const messageMiddle = document.querySelector(".message-middle");
 const playerButtons = document.querySelectorAll(".player-btn");
+const messageBottom = document.querySelector(".message-bottom");
 
 const weapons = ["rock", "paper", "scissors"];
 
