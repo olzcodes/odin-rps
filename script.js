@@ -1,9 +1,9 @@
 const computerScore = document.querySelector("#score-computer");
 const tieScore = document.querySelector("#score-tie");
 const playerScore = document.querySelector("#score-player");
-const displayRound = document.querySelector(".round");
+const messageTop = document.querySelector(".message-top");
 const computerButtons = document.querySelectorAll(".computer-btn");
-const message = document.querySelector(".message");
+const messageMiddle = document.querySelector(".message-middle");
 const playerButtons = document.querySelectorAll(".player-btn");
 
 const weapons = ["rock", "paper", "scissors"];
@@ -56,7 +56,7 @@ playerButtons.forEach((button) =>
     // Round counter
     round += 1;
     console.log(`Round ${round}`);
-    displayRound.textContent = `round ${round}`;
+    messageTop.textContent = `round ${round}`;
 
     // Play one round and update score
     showComputerSelection(computerSelection);
@@ -84,19 +84,19 @@ const playRound = function (playerSelection, computerSelection) {
   // Check for tie
   if (playerSelection === computerSelection) {
     console.log(`TIE`);
-    message.textContent = `TIE`;
+    messageMiddle.textContent = `TIE`;
     return "tie";
 
     // Check for player win
   } else if (playerSelection === winningPlays[computerSelection]) {
     console.log(`PLAYER wins!`);
-    message.textContent = `PLAYER wins!`;
+    messageMiddle.textContent = `PLAYER wins!`;
     return "player";
 
     // Computer wins
   } else {
     console.log(`COMPUTER wins!`);
-    message.textContent = `COMPUTER wins!`;
+    messageMiddle.textContent = `COMPUTER wins!`;
     return "computer";
   }
 };
@@ -105,13 +105,13 @@ const checkWinner = function () {
   // Check if there was a final winner
   if (score["player"] > score["computer"]) {
     console.log(`< < < PLAYER wins the game! > > >`);
-    message.textContent = `< < < PLAYER wins the game! > > >`;
+    messageMiddle.textContent = `< < < PLAYER wins the game! > > >`;
   } else if (score["player"] < score["computer"]) {
     console.log(`< < < COMPUTER wins the game! > > >`);
-    message.textContent = `< < < COMPUTER wins the game! > > >`;
+    messageMiddle.textContent = `< < < COMPUTER wins the game! > > >`;
   } else {
     console.log(`< < < TIE > > >`);
-    message.textContent = `< < < TIE > > >`;
+    messageMiddle.textContent = `< < < TIE > > >`;
   }
 
   setTimeout(afterGame, 1000);
@@ -124,7 +124,7 @@ const afterGame = function () {
   } else {
     gameActive = false;
     console.log(`Thank you for playing!`);
-    message.textContent = `thank you for playing :)`;
+    messageMiddle.textContent = `thank you for playing :)`;
   }
 };
 
@@ -134,10 +134,10 @@ const resetGame = function () {
   playerSelection = "";
   computerSelection = "";
   score = { computer: 0, tie: 0, player: 0 };
-  displayRound.textContent = "start";
+  messageTop.textContent = "start";
   computerScore.textContent = 0;
   tieScore.textContent = 0;
   playerScore.textContent = 0;
-  message.textContent = "choose your weapon";
+  messageMiddle.textContent = "choose your weapon";
   gameActive = true;
 };
