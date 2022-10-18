@@ -125,7 +125,7 @@ const afterGame = function () {
   } else {
     gameActive = false;
     console.log(`Thank you for playing :)`);
-    messageMiddle.textContent = `thank you for playing :)`;
+    messageBottom.textContent = `thank you for playing :)`;
   }
 };
 
@@ -139,6 +139,6 @@ const resetGame = function () {
   computerScore.textContent = 0;
   tieScore.textContent = 0;
   playerScore.textContent = 0;
-  messageMiddle.textContent = "choose your weapon";
+  messageMiddle.textContent = "start";
   gameActive = true;
 };
