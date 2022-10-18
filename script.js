@@ -40,10 +40,16 @@ const showPlayerSelection = function (button) {
 let playerSelection;
 let computerSelection;
 let round = 0;
+let gameActive = true;
 let score = { computer: 0, tie: 0, player: 0 };
 
 playerButtons.forEach((button) =>
   button.addEventListener("click", function (e) {
+    if (gameActive === false) {
+      afterGame();
+      return;
+    }
+
     playerSelection = this.classList.value.split(" ")[1];
     computerSelection = getComputerSelection();
 
@@ -64,6 +70,7 @@ playerButtons.forEach((button) =>
     console.log(`------------------------------------`);
 
     if (round === 5) {
+      gameActive = false;
       checkWinner();
     }
   })
@@ -115,6 +122,7 @@ const afterGame = function () {
   if (playAgain) {
     resetGame();
   } else {
+    gameActive = false;
     console.log(`Thank you for playing!`);
     message.textContent = `thank you for playing :)`;
   }
@@ -123,10 +131,13 @@ const afterGame = function () {
 const resetGame = function () {
   console.clear();
   round = 0;
+  playerSelection = "";
+  computerSelection = "";
   score = { computer: 0, tie: 0, player: 0 };
   roundDisplay.textContent = "start";
   computerScore.textContent = 0;
   tieScore.textContent = 0;
   playerScore.textContent = 0;
   message.textContent = "choose your weapon";
+  gameActive = true;
 };
