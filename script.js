@@ -43,38 +43,39 @@ let round = 0;
 let gameActive = true;
 let score = { computer: 0, tie: 0, player: 0 };
 
-playerButtons.forEach((button) =>
-  button.addEventListener("click", function (e) {
-    if (gameActive === false) {
-      afterGame();
-      return;
-    }
+const letsPlay = function () {
+  playerButtons.forEach((button) =>
+    button.addEventListener("click", function (e) {
+      if (gameActive === false) {
+        afterGame();
+        return;
+      }
 
-    playerSelection = this.classList.value.split(" ")[1];
-    computerSelection = getComputerSelection();
+      playerSelection = this.classList.value.split(" ")[1];
+      computerSelection = getComputerSelection();
 
-    // Round counter
-    round += 1;
-    console.log(`Round ${round}`);
-    messageMiddle.textContent = `round ${round}`;
+      // Round counter
+      round += 1;
+      console.log(`Round ${round}`);
 
-    // Play one round and update score
-    showComputerSelection(computerSelection);
-    showPlayerSelection(this);
-    const roundWinner = playRound(playerSelection, computerSelection);
-    score[roundWinner]++;
-    computerScore.textContent = score["computer"];
-    tieScore.textContent = score["tie"];
-    playerScore.textContent = score["player"];
-    console.log(score);
-    console.log(`------------------------------------`);
+      // Play one round and update score
+      showComputerSelection(computerSelection);
+      showPlayerSelection(this);
+      const roundWinner = playRound(playerSelection, computerSelection);
+      score[roundWinner]++;
+      computerScore.textContent = score["computer"];
+      tieScore.textContent = score["tie"];
+      playerScore.textContent = score["player"];
+      console.log(score);
+      console.log(`------------------------------------`);
 
-    if (round === 5) {
-      gameActive = false;
-      checkWinner();
-    }
-  })
-);
+      if (round === 5) {
+        gameActive = false;
+        checkWinner();
+      } else endRound();
+    })
+  );
+};
 
 const playRound = function (playerSelection, computerSelection) {
   // Display choices
@@ -101,6 +102,12 @@ const playRound = function (playerSelection, computerSelection) {
   }
 };
 
+const endRound = function () {
+  setTimeout(() => {
+    messageMiddle.textContent = `round ${round + 1}`;
+  }, 2000);
+};
+
 const checkWinner = function () {
   // Check if there was a final winner
   if (score["player"] > score["computer"]) {
@@ -113,6 +120,8 @@ const checkWinner = function () {
     console.log(`< < < NO WINNER > > >`);
     messageMiddle.textContent = `< < < NO WINNER > > >`;
   }
+
+  round = 0;
 
   setTimeout(afterGame, 1000);
 };
@@ -137,6 +146,9 @@ const resetGame = function () {
   computerScore.textContent = 0;
   tieScore.textContent = 0;
   playerScore.textContent = 0;
-  messageMiddle.textContent = "...";
+  messageMiddle.textContent = `round 1`;
+  messageBottom.textContent = `choose your weapon`;
   gameActive = true;
 };
+
+letsPlay();
