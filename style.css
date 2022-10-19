@@ -37,7 +37,7 @@ img {
 }
 
 table {
-  border: 1px solid turquoise;
+  border: 2px solid turquoise;
   padding: 1em;
 }
 
@@ -120,7 +120,7 @@ table {
 .message-top,
 .message-middle,
 .message-bottom {
-  border: 1px solid turquoise;
+  border: 2px solid turquoise;
   box-shadow: 0px 0px 15px 1px black;
   padding: 20px;
 }
