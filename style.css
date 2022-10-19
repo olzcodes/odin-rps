@@ -20,19 +20,25 @@ html {
   border-radius: 5em;
 }
 
+/* body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
 button {
   border: none;
   font-size: 1em;
 }
 
+img {
+  border-radius: 0px;
+  margin: 0px;
+}
+
 table {
   border: 1px solid turquoise;
   padding: 1em;
-}
-
-.round {
-  display: flex;
-  justify-content: space-around;
 }
 
 .score {
