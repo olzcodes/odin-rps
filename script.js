@@ -7,6 +7,11 @@ const computerButtons = document.querySelectorAll(".computer-btn");
 const messageMiddle = document.querySelector(".message-middle");
 const playerButtons = document.querySelectorAll(".player-btn");
 const messageBottom = document.querySelector(".message-bottom");
+const audioBGSwitch = document.querySelector("#audioBGSwitch");
+const audioButtonOn = document.querySelector("#audioButtonOn");
+const audioPlayerWin = document.querySelector("#audioPlayerWin");
+const audioComputerWin = document.querySelector("#audioComputerWin");
+const audioNoWinner = document.querySelector("#audioNoWinner");
 
 const weapons = ["rock", "paper", "scissors"];
 
@@ -33,6 +38,7 @@ const showComputerSelection = function (selection) {
 };
 
 const showPlayerSelection = function (button) {
+  audioButtonOn.play();
   buttonOn = true;
   button.classList.add("on");
   setTimeout(() => {
@@ -78,7 +84,9 @@ const letsPlay = function () {
 
       if (round === 5) {
         gameActive = false;
-        checkWinner();
+        setTimeout(() => {
+          checkWinner();
+        }, 2000);
       } else endRound();
     })
   );
@@ -120,17 +128,20 @@ const checkWinner = function () {
   if (score["player"] > score["computer"]) {
     console.log(`< < < PLAYER wins the game! > > >`);
     messageMiddle.textContent = `< < < PLAYER wins the game! > > >`;
+    audioPlayerWin.play();
   } else if (score["player"] < score["computer"]) {
     console.log(`< < < COMPUTER wins the game! > > >`);
     messageMiddle.textContent = `< < < COMPUTER wins the game! > > >`;
+    audioComputerWin.play();
   } else {
     console.log(`< < < NO WINNER > > >`);
     messageMiddle.textContent = `< < < NO WINNER > > >`;
+    audioNoWinner.play();
   }
 
   round = 0;
 
-  setTimeout(afterGame, 1000);
+  setTimeout(afterGame, 2000);
 };
 
 const afterGame = function () {
@@ -164,6 +175,7 @@ letsPlay();
 let colorNumber = 0;
 
 const toggleBGColor = function () {
+  audioBGSwitch.play();
   const colorArray = ["slateblue", "darkslateblue", "gray", "mediumslateblue"];
   html.style.backgroundColor = colorArray[colorNumber];
   if (colorNumber < colorArray.length - 1) {
