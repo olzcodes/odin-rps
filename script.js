@@ -174,7 +174,12 @@ let colorNumber = 0;
 
 const toggleBGColor = function () {
   audioBGSwitch.play();
-  const colorArray = ["slateblue", "darkslateblue", "gray", "mediumslateblue"];
+  const colorArray = [
+    "slateblue",
+    "mediumpurple",
+    "blueviolet",
+    "mediumslateblue",
+  ];
   html.style.backgroundColor = colorArray[colorNumber];
   if (colorNumber < colorArray.length - 1) {
     colorNumber++;
