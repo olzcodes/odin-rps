@@ -22,12 +22,22 @@ The aim of part 2 is to add a GUI (graphical user interface).
 
 ![screenshot after 5 rounds played](./screenshots/screenshot-3.png)
 
+#### Version 4 - Viewport after 5 rounds played
+
+![screenshot after 5 rounds played](./screenshots/screenshot-4.png)
+
+![screenshot showing button animations](./screenshots/screenshot-5.png)
+
 ## To-Do
 
 - [DONE] create basic graphical user interface
-- refine layout and graphics
-- add animations ?
-- add sounds ?
+- [DONE] refine layout and graphics
+- [DONE] add animations
+- [DONE] add sounds effects
+- add user accounts
+- add betting function
+- add payment methods
+- just kidding about the last 3
 
 ## What I learnt from this project
 
