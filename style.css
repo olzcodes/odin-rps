@@ -97,12 +97,12 @@ table {
   background-color: lightgray;
 }
 
-.computer-buttons > button.lit {
+.computer-buttons > button.on {
   background-color: ivory;
   box-shadow: 0px 0px 40px 20px #0ff;
 }
 
-.player-buttons > button.lit {
+.player-buttons > button.on {
   background-color: ivory;
   box-shadow: 0px 0px 40px 20px #ffd7ff;
 }
