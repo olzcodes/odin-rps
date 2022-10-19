@@ -97,8 +97,14 @@ table {
   background-color: lightgray;
 }
 
-.computer-buttons > button.pressed {
-  background-color: cyan;
+.computer-buttons > button.lit {
+  background-color: ivory;
+  box-shadow: 0px 0px 40px 20px #0ff;
+}
+
+.player-buttons > button.lit {
+  background-color: ivory;
+  box-shadow: 0px 0px 40px 20px #ffd7ff;
 }
 
 .computer-buttons button img {
