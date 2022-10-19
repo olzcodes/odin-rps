@@ -33,8 +33,10 @@ const showComputerSelection = function (selection) {
 };
 
 const showPlayerSelection = function (button) {
+  buttonOn = true;
   button.classList.add("on");
   setTimeout(() => {
+    buttonOn = false;
     button.classList.remove("on");
   }, 2000);
 };
@@ -43,11 +45,14 @@ let playerSelection;
 let computerSelection;
 let round = 0;
 let gameActive = true;
+let buttonOn = false;
 let score = { computer: 0, tie: 0, player: 0 };
 
 const letsPlay = function () {
   playerButtons.forEach((button) =>
     button.addEventListener("click", function (e) {
+      if (buttonOn === true) return;
+
       if (gameActive === false) {
         afterGame();
         return;
@@ -134,6 +139,7 @@ const afterGame = function () {
     resetGame();
   } else {
     gameActive = false;
+    console.log(`------------------------------------`);
     console.log(`Thank you for playing :)`);
     messageBottom.textContent = `thank you for playing :)`;
   }
