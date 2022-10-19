@@ -119,7 +119,7 @@ const playRound = function (playerSelection, computerSelection) {
 
 const endRound = function () {
   setTimeout(() => {
-    messageMiddle.textContent = `round ${round + 1}`;
+    messageMiddle.textContent = `Round ${round + 1}`;
   }, 2000);
 };
 
@@ -127,32 +127,30 @@ const checkWinner = function () {
   // Check if there was a final winner
   if (score["player"] > score["computer"]) {
     console.log(`< < < PLAYER wins the game! > > >`);
-    messageMiddle.textContent = `< < < PLAYER wins the game! > > >`;
+    messageMiddle.textContent = `PLAYER wins the game!`;
     audioPlayerWin.play();
   } else if (score["player"] < score["computer"]) {
     console.log(`< < < COMPUTER wins the game! > > >`);
-    messageMiddle.textContent = `< < < COMPUTER wins the game! > > >`;
+    messageMiddle.textContent = `COMPUTER wins the game!`;
     audioComputerWin.play();
   } else {
     console.log(`< < < NO WINNER > > >`);
-    messageMiddle.textContent = `< < < NO WINNER > > >`;
+    messageMiddle.textContent = `NO WINNER`;
     audioNoWinner.play();
   }
 
-  round = 0;
-
-  setTimeout(afterGame, 2000);
+  messageBottom.textContent = `Thank you for playing :)`;
 };
 
 const afterGame = function () {
-  let playAgain = confirm(`play again?`);
+  let playAgain = confirm(`Play again?`);
   if (playAgain) {
     resetGame();
   } else {
     gameActive = false;
     console.log(`------------------------------------`);
     console.log(`Thank you for playing :)`);
-    messageBottom.textContent = `thank you for playing :)`;
+    messageBottom.textContent = `Thank you for playing :)`;
   }
 };
 
@@ -165,8 +163,8 @@ const resetGame = function () {
   computerScore.textContent = 0;
   tieScore.textContent = 0;
   playerScore.textContent = 0;
-  messageMiddle.textContent = `round 1`;
-  messageBottom.textContent = `choose your weapon`;
+  messageMiddle.textContent = `Round 1`;
+  messageBottom.textContent = `Choose your weapon`;
   gameActive = true;
 };
 
