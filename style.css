@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   background-color: mediumslateblue;
-  color: white;
+  color: whitesmoke;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 1em;
@@ -95,10 +95,18 @@ table {
 
 .computer-buttons button {
   background-color: lightgray;
-  color: grey;
+}
+
+.computer-buttons > button.pressed {
+  background-color: cyan;
+}
+
+.computer-buttons button img {
+  opacity: 0.7;
 }
 
 .player-buttons button {
+  background-color: antiquewhite;
   border: 3px solid lightcoral;
   box-shadow: 0px 0px 15px 1px black;
 }
