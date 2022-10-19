@@ -14,17 +14,19 @@ The aim of part 2 is to add a GUI (graphical user interface).
 
 ![screenshot after 5 rounds played](./screenshots/screenshot-1.png)
 
-#### Version 2 - Viewport after 5 rounds played
+#### Version 2 - Crappy design
 
 ![screenshot after 5 rounds played](./screenshots/screenshot-2.png)
 
-#### Version 3 - Viewport after 5 rounds played
+#### Version 3 - Better design
 
 ![screenshot after 5 rounds played](./screenshots/screenshot-3.png)
 
-#### Version 4 - Viewport after 5 rounds played
+#### Version 4 - Final design
 
 ![screenshot after 5 rounds played](./screenshots/screenshot-4.png)
+
+#### Version 4 - Final design, showing button animations
 
 ![screenshot showing button animations](./screenshots/screenshot-5.png)
 
