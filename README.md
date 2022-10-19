@@ -12,15 +12,15 @@ The aim of part 2 is to add a GUI (graphical user interface).
 
 #### Version 1 - Browser javascript console after 5 rounds played
 
-![screenshot after 5 rounds played](./screenshot-1.png)
+![screenshot after 5 rounds played](./screenshots/screenshot-1.png)
 
 #### Version 2 - Viewport after 5 rounds played
 
-![screenshot after 5 rounds played](./screenshot-2.png)
+![screenshot after 5 rounds played](./screenshots/screenshot-2.png)
 
 #### Version 3 - Viewport after 5 rounds played
 
-![screenshot after 5 rounds played](./screenshot-3.png)
+![screenshot after 5 rounds played](./screenshots/screenshot-3.png)
 
 ## To-Do
 
