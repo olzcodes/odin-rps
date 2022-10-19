@@ -52,14 +52,15 @@ table {
 }
 
 .score-header {
-  width: 3em;
+  width: 2.5em;
+  font-size: 0.9em;
 }
 
 .score-data {
   background-color: lightcoral;
   color: white;
-  width: 3em;
-  height: 3em;
+  width: 2.5em;
+  height: 2.5em;
   font-size: 2em;
 }
 
