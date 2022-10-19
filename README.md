@@ -45,3 +45,15 @@ The aim of part 2 is to add a GUI (graphical user interface).
 
 - Early design choices become harder to reverse once I start adding complexity on top. For example, I used the HTML table element to display scores and this was probably not the best choice as it limits the changes that can be made to spacing and layout.
 - Code can get messy very quickly. It is worth spending extra time on creating a good design and mapping out the user flow before writing any JavaScript.
+
+## Credits
+
+#### Images
+
+https://www.svgrepo.com/svg/314133/hand-rock
+https://www.svgrepo.com/svg/361516/hand
+https://www.svgrepo.com/svg/314121/hand-peace
+
+#### Sounds Effects
+
+https://mixkit.co/free-sound-effects/click/
