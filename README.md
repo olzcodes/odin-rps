@@ -51,7 +51,9 @@ The aim of part 2 is to add a GUI (graphical user interface).
 #### Images
 
 https://www.svgrepo.com/svg/314133/hand-rock
+
 https://www.svgrepo.com/svg/361516/hand
+
 https://www.svgrepo.com/svg/314121/hand-peace
 
 #### Sounds Effects
