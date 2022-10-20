@@ -130,10 +130,16 @@ const checkWinner = function () {
     console.log(`< < < PLAYER wins the game! > > >`);
     messageMiddle.textContent = `PLAYER wins the game!`;
     audioPlayerWin.play();
+    scoreTable.style.borderColor = "violet";
+    messageMiddle.style.borderColor = "violet";
+    messageBottom.style.borderColor = "violet";
   } else if (score["player"] < score["computer"]) {
     console.log(`< < < COMPUTER wins the game! > > >`);
     messageMiddle.textContent = `COMPUTER wins the game!`;
     audioComputerWin.play();
+    scoreTable.style.borderColor = "turquoise";
+    messageMiddle.style.borderColor = "turquoise";
+    messageBottom.style.borderColor = "turquoise";
   } else {
     console.log(`< < < NO WINNER > > >`);
     messageMiddle.textContent = `NO WINNER`;
@@ -166,6 +172,9 @@ const resetGame = function () {
   playerScore.textContent = 0;
   messageMiddle.textContent = `Round 1`;
   messageBottom.textContent = `Choose your weapon`;
+  scoreTable.style.borderColor = "coral";
+  messageMiddle.style.borderColor = "coral";
+  messageBottom.style.borderColor = "coral";
   gameActive = true;
 };
 
