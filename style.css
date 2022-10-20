@@ -46,7 +46,7 @@ img {
 }
 
 table {
-  border: 2px solid turquoise;
+  border: 2px solid coral;
   padding: 1em;
 }
 
@@ -131,7 +131,7 @@ table {
 .message-top,
 .message-middle,
 .message-bottom {
-  border: 2px solid turquoise;
+  border: 2px solid coral;
   box-shadow: 0px 0px 15px 1px black;
   padding: 20px;
 }
