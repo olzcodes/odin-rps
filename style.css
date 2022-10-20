@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=Syne+Mono&display=swap");
+
 html {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   background-color: mediumslateblue;
   color: whitesmoke;
+  font-size: 1em;
 }
 
 *,
@@ -19,10 +22,17 @@ html {
   border-radius: 5em;
 }
 
-body {
+body.fontDefault {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 1em;
+}
+
+body.fontPTMono {
+  font-family: "PT Mono", monospace;
+}
+
+body.fontSyneMono {
+  font-family: "Syne Mono", monospace;
 }
 
 button {
