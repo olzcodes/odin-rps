@@ -144,6 +144,9 @@ const checkWinner = function () {
     console.log(`< < < NO WINNER > > >`);
     messageMiddle.textContent = `NO WINNER`;
     audioNoWinner.play();
+    scoreTable.style.borderColor = "coral";
+    messageMiddle.style.borderColor = "coral";
+    messageBottom.style.borderColor = "coral";
   }
 
   messageBottom.textContent = `Thank you for playing :)`;
