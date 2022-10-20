@@ -1,4 +1,5 @@
 const html = document.querySelector("html");
+const body = document.querySelector("body");
 const scoreTable = document.querySelector(".score");
 const computerScore = document.querySelector("#score-computer");
 const tieScore = document.querySelector("#score-tie");
@@ -7,7 +8,7 @@ const computerButtons = document.querySelectorAll(".computer-btn");
 const messageMiddle = document.querySelector(".message-middle");
 const playerButtons = document.querySelectorAll(".player-btn");
 const messageBottom = document.querySelector(".message-bottom");
-const audioBGSwitch = document.querySelector("#audioBGSwitch");
+const audioStyleSwitch = document.querySelector("#audioStyleSwitch");
 const audioButtonOn = document.querySelector("#audioButtonOn");
 const audioPlayerWin = document.querySelector("#audioPlayerWin");
 const audioComputerWin = document.querySelector("#audioComputerWin");
@@ -170,10 +171,11 @@ const resetGame = function () {
 
 letsPlay();
 
+// Toggle background color
 let colorNumber = 0;
 
 const toggleBGColor = function () {
-  audioBGSwitch.play();
+  audioStyleSwitch.play();
   const colorArray = [
     "slateblue",
     "mediumpurple",
@@ -187,3 +189,17 @@ const toggleBGColor = function () {
 };
 
 scoreTable.addEventListener("click", toggleBGColor);
+
+// Toggle font
+let fontNumber = 0;
+const toggleFont = function () {
+  audioStyleSwitch.play();
+  const fontClassArray = ["fontPTMono", "fontSyneMono", "fontDefault"];
+  body.classList.remove(body.className);
+  body.classList.add(fontClassArray[fontNumber]);
+  if (fontNumber < fontClassArray.length - 1) {
+    fontNumber++;
+  } else fontNumber = 0;
+};
+
+messageMiddle.addEventListener("click", toggleFont);
