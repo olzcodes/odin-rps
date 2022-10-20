@@ -172,23 +172,39 @@ const resetGame = function () {
 letsPlay();
 
 // Toggle background color
-let colorNumber = 0;
+let BGColorNumber = 0;
 
 const toggleBGColor = function () {
   audioStyleSwitch.play();
-  const colorArray = [
+  const BGColorArray = [
     "slateblue",
     "mediumpurple",
     "blueviolet",
     "mediumslateblue",
   ];
-  html.style.backgroundColor = colorArray[colorNumber];
-  if (colorNumber < colorArray.length - 1) {
-    colorNumber++;
-  } else colorNumber = 0;
+  html.style.backgroundColor = BGColorArray[BGColorNumber];
+  if (BGColorNumber < BGColorArray.length - 1) {
+    BGColorNumber++;
+  } else BGColorNumber = 0;
 };
 
 scoreTable.addEventListener("click", toggleBGColor);
+
+// Toggle background color
+let borderColorNumber = 0;
+
+const toggleBorderColor = function () {
+  audioStyleSwitch.play();
+  const borderColorArray = ["turquoise", "violet", "coral"];
+  scoreTable.style.borderColor = borderColorArray[borderColorNumber];
+  messageMiddle.style.borderColor = borderColorArray[borderColorNumber];
+  messageBottom.style.borderColor = borderColorArray[borderColorNumber];
+  if (borderColorNumber < borderColorArray.length - 1) {
+    borderColorNumber++;
+  } else borderColorNumber = 0;
+};
+
+messageMiddle.addEventListener("click", toggleBorderColor);
 
 // Toggle font
 let fontNumber = 0;
@@ -202,4 +218,4 @@ const toggleFont = function () {
   } else fontNumber = 0;
 };
 
-messageMiddle.addEventListener("click", toggleFont);
+messageBottom.addEventListener("click", toggleFont);
