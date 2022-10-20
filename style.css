@@ -91,6 +91,7 @@ table {
 .player-buttons button {
   flex: 1;
   height: 5em;
+  width: 5em;
 }
 
 .computer-buttons button {
