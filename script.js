@@ -232,15 +232,15 @@ messageBottom.addEventListener("click", toggleFont);
 
 const useKeyboard = function () {
   window.addEventListener("keydown", function (e) {
-    if (e.code === "KeyR" || e.code === "KeyA") {
+    if (e.code === "KeyR" || e.code === "KeyQ") {
       const playRoundRock = playRound.bind(playerButtons[0]);
       playRoundRock();
     }
-    if (e.code === "KeyP" || e.code === "KeyS") {
+    if (e.code === "KeyP" || e.code === "KeyW") {
       const playRoundRock = playRound.bind(playerButtons[1]);
       playRoundRock();
     }
-    if (e.code === "KeyS" || e.code === "KeyD") {
+    if (e.code === "KeyS" || e.code === "KeyE") {
       const playRoundRock = playRound.bind(playerButtons[2]);
       playRoundRock();
     }
