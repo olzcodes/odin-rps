@@ -1,6 +1,6 @@
 # odin-rps
 
-**Live: https://olzcodes.github.io/odin-rps/**
+**LIVE: https://olzcodes.github.io/odin-rps/**
 
 This was a two-part project.
 
