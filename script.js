@@ -229,7 +229,6 @@ const toggleFont = function () {
 messageBottom.addEventListener("click", toggleFont);
 
 // Play using keyboard
-
 const useKeyboard = function () {
   window.addEventListener("keydown", function (e) {
     if (e.code === "KeyR" || e.code === "KeyQ") {
