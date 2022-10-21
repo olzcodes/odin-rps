@@ -9,8 +9,9 @@ const messageMiddle = document.querySelector(".message-middle");
 const playerButtons = document.querySelectorAll(".player-btn");
 const messageBottom = document.querySelector(".message-bottom");
 const audioStyleSwitch = document.querySelector("#audioStyleSwitch");
-const audioButtonOn = document.querySelector("#audioButtonOn2");
-const audioPlayerWin = document.querySelector("#audioPlayerWin2");
+const audioButtonOn = document.querySelector("#audioButtonOn");
+const audioPlayerWinSmall = document.querySelector("#audioPlayerWinSmall");
+const audioPlayerWinBig = document.querySelector("#audioPlayerWinBig");
 const audioComputerWin = document.querySelector("#audioComputerWin");
 const audioNoWinner = document.querySelector("#audioNoWinner");
 
@@ -129,7 +130,11 @@ const checkWinner = function () {
   if (score["player"] > score["computer"]) {
     console.log(`< < < PLAYER wins the game! > > >`);
     messageMiddle.textContent = `PLAYER wins the game!`;
-    audioPlayerWin.play();
+    if (score["computer"] === 0) {
+      audioPlayerWinBig.play();
+    } else {
+      audioPlayerWinSmall.play();
+    }
     scoreTable.style.borderColor = "violet";
     messageMiddle.style.borderColor = "violet";
     messageBottom.style.borderColor = "violet";
