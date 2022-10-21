@@ -18,13 +18,13 @@ Play on mobile device using touch, or play using mouse/keyboard.
 
 Keyboard shortcuts:
 
-- Rock: [R] or [Q]
-- Paper: [P] or [W]
-- Scissors: [S] or [E]
+- Rock: **`R`** or **`Q`**
+- Paper: **`P`** or **`W`**
+- Scissors: **`S`** or **`E`**
 
-- Toggle background color: [1]
-- Toggle border color: [2]
-- Toggle font: [3]
+- Toggle background color: **`1`**
+- Toggle border color: **`2`**
+- Toggle font: **`3`**
 
 ## Screenshots
 
