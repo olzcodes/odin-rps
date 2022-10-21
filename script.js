@@ -23,6 +23,14 @@ const winningPlays = {
   scissors: "rock",
 };
 
+const defaultTimeout = 1800;
+let computerSelection;
+let playerSelection;
+let round = 0;
+let gameActive = true;
+let buttonOn = false;
+let score = { computer: 0, tie: 0, player: 0 };
+
 const getComputerSelection = function () {
   const number = Math.trunc(3 * Math.random());
   return weapons[number];
@@ -35,83 +43,73 @@ const showComputerSelection = function (selection) {
     }
     setTimeout(() => {
       button.classList.remove("on");
-    }, 2000);
+    }, defaultTimeout);
   });
 };
 
 const showPlayerSelection = function (button) {
-  audioButtonOn.play();
   buttonOn = true;
   button.classList.add("on");
+  audioButtonOn.play();
   setTimeout(() => {
     buttonOn = false;
     button.classList.remove("on");
-  }, 2000);
+  }, defaultTimeout);
 };
 
-let playerSelection;
-let computerSelection;
-let round = 0;
-let gameActive = true;
-let buttonOn = false;
-let score = { computer: 0, tie: 0, player: 0 };
-
-const letsPlay = function () {
+const playerButtonClick = function () {
   playerButtons.forEach((button) =>
-    button.addEventListener("click", function (e) {
-      if (buttonOn === true) return;
-
-      if (gameActive === false) {
-        afterGame();
-        return;
-      }
-
-      playerSelection = this.classList.value.split(" ")[1];
-      computerSelection = getComputerSelection();
-
-      // Round counter
-      round += 1;
-      console.log(`Round ${round}`);
-
-      // Play one round and update score
-      showComputerSelection(computerSelection);
-      showPlayerSelection(this);
-      const roundWinner = playRound(playerSelection, computerSelection);
-      score[roundWinner]++;
-      computerScore.textContent = score["computer"];
-      tieScore.textContent = score["tie"];
-      playerScore.textContent = score["player"];
-      console.log(score);
-      console.log(`------------------------------------`);
-
-      if (round === 5) {
-        gameActive = false;
-        setTimeout(() => {
-          checkWinner();
-        }, 2000);
-      } else endRound();
-    })
+    button.addEventListener("click", playRound)
   );
 };
 
-const playRound = function (playerSelection, computerSelection) {
-  // Display choices
+const playRound = function () {
+  if (buttonOn === true) return;
+
+  if (gameActive === false) {
+    afterGame();
+    return;
+  }
+
+  // Play one round and update score
+  round += 1;
+  console.log(`Round ${round}`);
+  computerSelection = getComputerSelection();
+  playerSelection = this.classList.value.split(" ")[1];
+  showComputerSelection(computerSelection);
+  showPlayerSelection(this);
+  const roundWinner = getRoundWinner(playerSelection, computerSelection);
+  score[roundWinner]++;
+  computerScore.textContent = score["computer"];
+  tieScore.textContent = score["tie"];
+  playerScore.textContent = score["player"];
+  console.log(score);
+  console.log(`------------------------------------`);
+
+  if (round === 5) {
+    gameActive = false;
+    setTimeout(() => {
+      declareFinalWinner();
+    }, defaultTimeout);
+  } else {
+    setTimeout(() => {
+      messageMiddle.textContent = `Round ${round + 1}`;
+    }, defaultTimeout);
+  }
+};
+
+const getRoundWinner = function (playerSelection, computerSelection) {
   console.log(`player:   ${playerSelection}`);
   console.log(`computer: ${computerSelection}`);
 
-  // Check for tie
   if (playerSelection === computerSelection) {
     console.log(`TIE`);
     messageMiddle.textContent = `TIE`;
     return "tie";
-
-    // Check for player win
   } else if (playerSelection === winningPlays[computerSelection]) {
     console.log(`PLAYER wins!`);
     messageMiddle.textContent = `PLAYER wins!`;
     return "player";
-
-    // Computer wins
   } else {
     console.log(`COMPUTER wins!`);
     messageMiddle.textContent = `COMPUTER wins!`;
@@ -119,14 +117,7 @@ const playRound = function (playerSelection, computerSelection) {
   }
 };
 
-const endRound = function () {
-  setTimeout(() => {
-    messageMiddle.textContent = `Round ${round + 1}`;
-  }, 2000);
-};
-
-const checkWinner = function () {
-  // Check if there was a final winner
+const declareFinalWinner = function () {
   if (score["player"] > score["computer"]) {
     console.log(`< < < PLAYER wins the game! > > >`);
     messageMiddle.textContent = `PLAYER wins the game!`;
@@ -162,7 +153,7 @@ const afterGame = function () {
   if (playAgain) {
     resetGame();
   } else {
-    gameActive = false;
+    // gameActive = false;
     console.log(`------------------------------------`);
     console.log(`Thank you for playing :)`);
     messageBottom.textContent = `Thank you for playing :)`;
@@ -186,7 +177,7 @@ const resetGame = function () {
   gameActive = true;
 };
 
-letsPlay();
+playerButtonClick();
 
 // Toggle background color
 let BGColorNumber = 0;
