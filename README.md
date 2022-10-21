@@ -8,7 +8,9 @@ More information: https://www.theodinproject.com/lessons/foundations-rock-paper-
 
 The aim of part 2 is to add a GUI (graphical user interface).
 
-## Instructions
+More information: https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors
+
+## Game Instructions
 
 Play on mobile device using touch, or play using mouse/keyboard.
 
@@ -60,7 +62,7 @@ Keyboard shortcuts:
 ## What I learnt from this project
 
 - Early design choices become harder to reverse once I start adding complexity on top. For example, I used the HTML table element to display scores and this was probably not the best choice as it limits the changes that can be made to spacing and layout.
-- Code can get messy very quickly. It is worth spending extra time on creating a good design and mapping out the user flow before writing any JavaScript.
+- Code can get messy very quickly. It is worth spending extra time on creating a good design and mapping out the user flows before writing any JavaScript.
 
 ## Credits
 
