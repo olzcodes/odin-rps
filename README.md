@@ -8,6 +8,20 @@ More information: https://www.theodinproject.com/lessons/foundations-rock-paper-
 
 The aim of part 2 is to add a GUI (graphical user interface).
 
+## Instructions
+
+Play on mobile device using touch, or play using mouse/keyboard.
+
+Keyboard shortcuts:
+
+- Rock: [R] or [Q]
+- Paper: [P] or [W]
+- Scissors: [S] or [E]
+
+- Toggle background color: [1]
+- Toggle border color: [2]
+- Toggle font: [3]
+
 ## Screenshots
 
 #### Version 1 - Browser javascript console after 5 rounds played
@@ -36,6 +50,8 @@ The aim of part 2 is to add a GUI (graphical user interface).
 - [DONE] refine layout and graphics
 - [DONE] add animations
 - [DONE] add sounds effects
+- [DONE] toggle switches background color, border color, and font
+- [DONE] add keyboard support
 - add user accounts
 - add betting functionality
 - add payment methods
