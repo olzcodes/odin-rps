@@ -27,6 +27,7 @@ const defaultTimeout = 1800;
 let computerSelection;
 let playerSelection;
 let round = 0;
+let roundWinner = "";
 let gameActive = true;
 let buttonOn = false;
 let score = { computer: 0, tie: 0, player: 0 };
@@ -78,7 +79,7 @@ const playRound = function () {
   playerSelection = this.classList.value.split(" ")[1];
   showComputerSelection(computerSelection);
   showPlayerSelection(this);
-  const roundWinner = getRoundWinner(playerSelection, computerSelection);
+  roundWinner = getRoundWinner(playerSelection, computerSelection);
   score[roundWinner]++;
   computerScore.textContent = score["computer"];
   tieScore.textContent = score["tie"];
