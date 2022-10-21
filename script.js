@@ -153,7 +153,6 @@ const afterGame = function () {
   if (playAgain) {
     resetGame();
   } else {
-    // gameActive = false;
     console.log(`------------------------------------`);
     console.log(`Thank you for playing :)`);
     messageBottom.textContent = `Thank you for playing :)`;
