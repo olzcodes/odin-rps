@@ -227,3 +227,33 @@ const toggleFont = function () {
 };
 
 messageBottom.addEventListener("click", toggleFont);
+
+// Play using keyboard
+
+const useKeyboard = function () {
+  window.addEventListener("keydown", function (e) {
+    if (e.code === "KeyR" || e.code === "KeyA") {
+      const playRoundRock = playRound.bind(playerButtons[0]);
+      playRoundRock();
+    }
+    if (e.code === "KeyP" || e.code === "KeyS") {
+      const playRoundRock = playRound.bind(playerButtons[1]);
+      playRoundRock();
+    }
+    if (e.code === "KeyS" || e.code === "KeyD") {
+      const playRoundRock = playRound.bind(playerButtons[2]);
+      playRoundRock();
+    }
+    if (e.code === "Digit1") {
+      toggleBGColor();
+    }
+    if (e.code === "Digit2") {
+      toggleBorderColor();
+    }
+    if (e.code === "Digit3") {
+      toggleFont();
+    }
+  });
+};
+
+useKeyboard();
