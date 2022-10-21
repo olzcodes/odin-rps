@@ -5,10 +5,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
   <title>Odin Rock Paper Scissors</title>
 </head>
 
-<body>
+<body class="fontDefault">
+  <table class="score">
+    <tr class="score-row">
+      <td class="score-data" id="score-computer">0</td>
+      <td class="score-data" id="score-tie">0</td>
+      <td class="score-data" id="score-player">0</td>
+    </tr>
+    <tr class="score-row">
+      <th class="score-header">COMPUTER</th>
+      <th class="score-header">TIE</th>
+      <th class="score-header">PLAYER</th>
+    </tr>
+  </table>
+  </div>
+
+  <div class="computer">
+    <div class="computer-buttons">
+      <button class="computer-btn rock"><img width="40" height="40" src="./images/rock.svg"></button>
+      <button class="computer-btn paper"><img width="32" height="32" src="./images/paper.svg"></button>
+      <button class="computer-btn scissors"><img width=" 40" height="40" src="./images/scissors.svg"></button>
+    </div>
+  </div>
+
+  <div class="message-middle">Round 1</div>
+
+  <div class="player">
+    <div class="player-buttons">
+      <button class="player-btn rock"><img width="40" height="40" src="./images/rock.svg"></button>
+      <button class="player-btn paper"><img width="32" height="32" src="./images/paper.svg"></button>
+      <button class="player-btn scissors"><img width="40" height="40" src="./images/scissors.svg"></button>
+    </div>
+  </div>
+
+  <div class="message-bottom">Choose your weapon</div>
+
+  <!-- Sound Effects -->
+  <audio id="audioStyleSwitch" src="./sounds/mixkit-arcade-game-jump-coin-216.wav"></audio>
+  <audio id="audioButtonOn" src="./sounds/mixkit-gear-metallic-lock-sound-2858.wav"></audio>
+  <audio id="audioComputerWin" src="./sounds/mixkit-software-interface-remove-2576.wav"></audio>
+  <audio id="audioNoWinner" src="./sounds/mixkit-click-melodic-tone-1129.wav"></audio>
+  <audio id="audioPlayerWinSmall" src="./sounds/mixkit-small-win-2020.wav"></audio>
+  <audio id="audioPlayerWinBig" src="./sounds/mixkit-video-game-win-2016.wav"></audio>
+
 
   <script src="script.js"></script>
 </body>

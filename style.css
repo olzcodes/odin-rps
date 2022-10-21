@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=Syne+Mono&display=swap");
+
+html {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background-color: mediumslateblue;
+  color: whitesmoke;
+  font-size: 1em;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  text-align: center;
+}
+
+* {
+  /* border: 1px solid red; */
+  margin: 10px;
+  border-radius: 5em;
+}
+
+body.fontDefault {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+body.fontPTMono {
+  font-family: "PT Mono", monospace;
+}
+
+body.fontSyneMono {
+  font-family: "Syne Mono", monospace;
+}
+
+button {
+  border: none;
+  font-size: 1em;
+}
+
+img {
+  border-radius: 0px;
+  margin: 0px;
+}
+
+table {
+  border: 2px solid coral;
+  padding: 1em;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 0px 15px 1px black;
+}
+
+.score-row {
+  height: 2em;
+}
+
+.score-header {
+  width: 2.5em;
+  font-size: 0.9em;
+}
+
+.score-data {
+  background-color: lightcoral;
+  color: white;
+  width: 2.5em;
+  height: 2.5em;
+  font-size: 2em;
+}
+
+.computer,
+.player {
+  display: flex;
+  justify-content: center;
+}
+
+.computer {
+  /* border: 1px solid black; */
+  background-color: turquoise;
+  /* box-shadow: 0px 0px 15px 1px black; */
+}
+
+.player {
+  /* border: 1px solid black; */
+  background-color: violet;
+  /* box-shadow: 0px 0px 15px 1px black; */
+}
+
+.computer-buttons,
+.player-buttons {
+  display: flex;
+  flex: 1;
+}
+
+.computer-buttons button,
+.player-buttons button {
+  flex: 1;
+  height: 5em;
+  width: 5em;
+}
+
+.computer-buttons button {
+  background-color: lightgray;
+}
+
+.computer-buttons > button.on {
+  background-color: ivory;
+  box-shadow: 0px 0px 40px 20px #0ff;
+}
+
+.player-buttons > button.on {
+  background-color: ivory;
+  box-shadow: 0px 0px 40px 20px #ffd7ff;
+}
+
+.computer-buttons button img {
+  opacity: 0.7;
+}
+
+.player-buttons button {
+  background-color: antiquewhite;
+  border: 3px solid lightcoral;
+  box-shadow: 0px 0px 15px 1px black;
+}
+
+.message-top,
+.message-middle,
+.message-bottom {
+  min-height: 63px;
+  border: 2px solid coral;
+  box-shadow: 0px 0px 15px 1px black;
+  padding: 20px;
+}
