@@ -236,12 +236,12 @@ const useKeyboard = function () {
       playRoundRock();
     }
     if (e.code === "KeyP" || e.code === "KeyW") {
-      const playRoundRock = playRound.bind(playerButtons[1]);
-      playRoundRock();
+      const playRoundPaper = playRound.bind(playerButtons[1]);
+      playRoundPaper();
     }
     if (e.code === "KeyS" || e.code === "KeyE") {
-      const playRoundRock = playRound.bind(playerButtons[2]);
-      playRoundRock();
+      const playRoundScissors = playRound.bind(playerButtons[2]);
+      playRoundScissors();
     }
     if (e.code === "Digit1") {
       toggleBGColor();
