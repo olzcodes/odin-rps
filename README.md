@@ -63,7 +63,7 @@ Keyboard shortcuts:
 
 ## What I learned from this project
 
-- Early design choices become harder to reverse once I start adding complexity on top. For example, I used the HTML table element to display scores and this was probably not the best choice as it limits the changes that can be made to spacing and layout.
+- Early design choices become harder to reverse after we start building on top of them. For example, I used the HTML table element to display scores and this was probably not the best choice as it limits the changes that can be made to spacing and layout.
 - Code can get messy very quickly. It is worth spending extra time on creating a good design and mapping out the user flows before writing any JavaScript.
 
 ## Credits
